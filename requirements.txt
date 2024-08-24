@@ -1,0 +1,10 @@
+Flask
+Flask-CORS
+pinecone-client
+requests
+beautifulsoup4
+textblob
+scikit-learn
+numpy
+sentence-transformers
+google-generativeai

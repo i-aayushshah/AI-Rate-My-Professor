@@ -1,0 +1,31 @@
+.chatContainer {
+    @apply border rounded-lg p-4 bg-white shadow-md;
+  }
+
+  .messageList {
+    @apply space-y-2 mb-4 h-64 overflow-y-auto;
+  }
+
+  .message {
+    @apply p-2 rounded-lg max-w-3/4;
+  }
+
+  .userMessage {
+    @apply bg-blue-100 text-blue-800 ml-auto;
+  }
+
+  .aiMessage {
+    @apply bg-gray-100 text-gray-800;
+  }
+
+  .inputContainer {
+    @apply flex;
+  }
+
+  .input {
+    @apply flex-grow mr-2 input-primary;
+  }
+
+  .sendButton {
+    @apply btn-primary;
+  }
