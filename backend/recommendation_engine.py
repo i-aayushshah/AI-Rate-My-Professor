@@ -1,9 +1,11 @@
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
+from pinecone_manager import PineconeManager
+import json
 
 class RecommendationEngine:
     def __init__(self):
-        pass
+        self.pinecone_manager = PineconeManager()
 
     def get_recommendations(self, criteria):
         professors = self.fetch_professors(criteria)
@@ -27,23 +29,33 @@ class RecommendationEngine:
         return recommendations
 
     def fetch_professors(self, criteria):
-        # This method should interact with your database to fetch professors
-        # based on the given criteria. For now, we'll return a dummy list.
-        return [
-            {
-                'name': 'John Doe',
-                'university': 'Example University',
-                'department': 'Computer Science',
-                'rating': 4.5,
-                'expertise': ['Machine Learning', 'Data Science'],
-                'teaching_style': 'Interactive',
-                'reviews': [
-                    {'rating': 5, 'comment': 'Great professor!'},
-                    {'rating': 4, 'comment': 'Very knowledgeable.'}
-                ]
-            },
-            # Add more professor data as needed
-        ]
+        query = self.criteria_to_query(criteria)
+        results = self.pinecone_manager.search(query)
+
+        professors = []
+        for result in results:
+            professor = {
+                'id': result.get('id', ''),
+                'name': result.get('name', ''),
+                'university': result.get('university', ''),
+                'department': result.get('department', ''),
+                'rating': result.get('rating', 0),
+                'expertise': result.get('expertise', []),
+                'teaching_style': result.get('teaching_style', ''),
+                'reviews': json.loads(result.get('reviews', '[]'))
+            }
+            professors.append(professor)
+
+        return professors
+
+    def criteria_to_query(self, criteria):
+        query_parts = []
+        for key, value in criteria.items():
+            if isinstance(value, list):
+                query_parts.extend([f"{key}:{v}" for v in value])
+            else:
+                query_parts.append(f"{key}:{value}")
+        return " ".join(query_parts)
 
     def generate_feature_vector(self, prof):
         expertise_vector = self.expertise_to_vector(prof.get('expertise', []))
@@ -52,8 +64,8 @@ class RecommendationEngine:
         reviews = prof.get('reviews', [])
         if isinstance(reviews, str):
             try:
-                reviews = eval(reviews)
-            except:
+                reviews = json.loads(reviews)
+            except json.JSONDecodeError:
                 reviews = []
 
         return np.array([
@@ -65,9 +77,12 @@ class RecommendationEngine:
         ])
 
     def expertise_to_vector(self, expertise_list):
-        all_expertise = ['Machine Learning', 'Data Science', 'Web Development', 'Algorithms']
+        all_expertise = ['Machine Learning', 'Data Science', 'Web Development', 'Algorithms',
+                         'Artificial Intelligence', 'Database Systems', 'Computer Networks',
+                         'Software Engineering', 'Cybersecurity', 'Computer Graphics']
         return [1 if exp in expertise_list else 0 for exp in all_expertise]
 
     def teaching_style_to_vector(self, teaching_style):
-        styles = ['Interactive', 'Lecture-based', 'Project-based', 'Flipped classroom']
+        styles = ['Interactive', 'Lecture-based', 'Project-based', 'Flipped classroom',
+                  'Discussion-based', 'Lab-based', 'Problem-based learning', 'Team-based learning']
         return [1 if teaching_style == style else 0 for style in styles]
