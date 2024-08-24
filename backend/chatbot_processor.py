@@ -5,6 +5,8 @@ import nltk
 from nltk.sentiment import SentimentIntensityAnalyzer
 from sentiment_analyzer import SentimentAnalyzer
 from recommendation_engine import RecommendationEngine
+import json
+
 
 nltk.download('vader_lexicon')  # Ensure NLTK sentiment analyzer is downloaded
 
@@ -15,13 +17,9 @@ class ChatbotProcessor:
         self.model = genai.GenerativeModel('gemini-pro')
         self.chat = self.model.start_chat(history=[])
 
-
         self.pinecone_manager = PineconeManager()
-
         self.sentiment_analyzer = SentimentIntensityAnalyzer()
-
         self.custom_sentiment_analyzer = SentimentAnalyzer()
-
         self.recommendation_engine = RecommendationEngine()
 
     def fetch_data_from_pinecone(self, query):
@@ -115,32 +113,41 @@ class ChatbotProcessor:
             university = result.get('university', 'N/A')
             department = result.get('department', 'N/A')
             rating = result.get('rating', 'N/A')
-            reviews = result.get('reviews', [])
+            expertise = result.get('expertise', [])
+            teaching_style = result.get('teaching_style', 'N/A')
+            reviews = json.loads(result.get('reviews', '[]'))
 
             prof_info = [
                 f"Prof. {name}",
                 f"University: {university}",
                 f"Department: {department}",
-                f"Rating: {rating}"
+                f"Rating: {rating}",
+                f"Expertise: {', '.join(expertise)}",
+                f"Teaching Style: {teaching_style}"
             ]
 
             if reviews:
                 prof_info.append("Reviews:")
                 for review in reviews:
-                    prof_info.append(f"- {review}")
+                    prof_info.append(f"- {review['text']} (Rating: {review['rating']}, Date: {review['date']})")
             else:
                 prof_info.append("Reviews: No reviews available.")
-
-            additional_info = result.get('additional_info', {})
-            if additional_info:
-                prof_info.append("Additional Information:")
-                for key, value in additional_info.items():
-                    if value != 'N/A':
-                        prof_info.append(f"- {key.replace('_', ' ').title()}: {value}")
 
             formatted_results.append("\n".join(prof_info))
 
         return "\n\n".join(formatted_results)
+
+    def extract_professor_id(self, message):
+        # Extract professor ID from the message
+        match = re.search(r'professor id (\d+)', message, re.IGNORECASE)
+        if match:
+            return match.group(1)
+        return None
+
+    def extract_criteria(self, message):
+        # Extract criteria from the message
+        # Implement extraction logic based on the message content
+        return {"criteria": message}
 
     def process(self, message):
         # Handle greetings and sentiment first
@@ -176,36 +183,3 @@ class ChatbotProcessor:
         enriched_message = f"{message}\n\nRelevant Information:\n{formatted_info}"
         response = self.chat.send_message(enriched_message)
         return response.text
-
-    def extract_professor_id(self, message):
-        # Extract professor ID from the message
-        # This is a placeholder implementation; customize it as per your need
-        match = re.search(r"\bprofessor_id:(\d+)\b", message)
-        return match.group(1) if match else None
-
-    def extract_criteria(self, message):
-        # Extract criteria for recommendations from the message
-        criteria = {
-            'university': re.search(r"\buniversity:(\w+)\b", message),
-            'department': re.search(r"\bdepartment:(\w+)\b", message),
-            'rating': re.search(r"\brating:(\d+(?:\.\d+)?)\b", message),
-            'expertise': re.findall(r"\bexpertise:(\w+)\b", message),
-            'teaching_style': re.search(r"\bteaching style:(\w+)\b", message),
-        }
-        return {k: v.group(1) if isinstance(v, re.Match) else v for k, v in criteria.items() if v}
-
-    def reset_conversation(self):
-        self.chat = self.model.start_chat(history=[])
-
-# Usage example
-if __name__ == "__main__":
-    processor = ChatbotProcessor()
-
-    while True:
-        user_input = input("You: ")
-        if user_input.lower() == 'exit':
-            break
-        response = processor.process(user_input)
-        print(f"Chatbot: {response}")
-
-    print("Conversation ended.")
