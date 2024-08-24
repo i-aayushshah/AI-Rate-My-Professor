@@ -18,6 +18,8 @@ class ProfessorScraper:
             'university': self.extract_university(soup),
             'department': self.extract_department(soup),
             'rating': self.extract_rating(soup),
+            'expertise': self.extract_expertise(soup),
+            'teaching_style': self.extract_teaching_style(soup),
             'reviews': self.extract_reviews(soup)
         }
 
@@ -38,6 +40,14 @@ class ProfessorScraper:
     def extract_rating(self, soup):
         rating_element = soup.find('div', class_='RatingValue__Numerator-qw8sqy-2')
         return float(rating_element.text.strip()) if rating_element else 0.0
+
+    def extract_expertise(self, soup):
+        expertise_elements = soup.find_all('div', class_='ExpertiseClass')  # Adjust the class as needed
+        return [expertise_element.text.strip() for expertise_element in expertise_elements]
+
+    def extract_teaching_style(self, soup):
+        teaching_style_element = soup.find('div', class_='TeachingStyleClass')  # Adjust the class as needed
+        return teaching_style_element.text.strip() if teaching_style_element else ''
 
     def extract_reviews(self, soup):
         reviews = []

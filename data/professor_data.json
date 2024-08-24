@@ -5,6 +5,8 @@
       "university": "Stanford University",
       "department": "Computer Science",
       "rating": 4.8,
+      "expertise": ["Machine Learning", "Data Science"],
+      "teaching_style": "Interactive",
       "reviews": [
           {
               "rating": 5,
@@ -24,6 +26,8 @@
       "university": "MIT",
       "department": "Physics",
       "rating": 4.5,
+      "expertise": ["Quantum Mechanics", "Thermodynamics"],
+      "teaching_style": "Lecture-Based",
       "reviews": [
           {
               "rating": 5,
@@ -43,6 +47,8 @@
       "university": "Harvard University",
       "department": "Mathematics",
       "rating": 4.2,
+      "expertise": ["Algebra", "Calculus"],
+      "teaching_style": "Problem-Solving",
       "reviews": [
           {
               "rating": 4,
@@ -62,6 +68,8 @@
       "university": "UC Berkeley",
       "department": "Chemistry",
       "rating": 4.7,
+      "expertise": ["Organic Chemistry", "Analytical Chemistry"],
+      "teaching_style": "Experiential",
       "reviews": [
           {
               "rating": 5,
@@ -81,6 +89,8 @@
       "university": "Caltech",
       "department": "Electrical Engineering",
       "rating": 4.4,
+      "expertise": ["Signal Processing", "Circuit Design"],
+      "teaching_style": "Hands-On",
       "reviews": [
           {
               "rating": 4,
@@ -100,6 +110,8 @@
       "university": "University of Washington",
       "department": "Biology",
       "rating": 4.6,
+      "expertise": ["Genetics", "Cell Biology"],
+      "teaching_style": "Research-Based",
       "reviews": [
           {
               "rating": 5,
@@ -119,6 +131,8 @@
       "university": "Princeton University",
       "department": "Economics",
       "rating": 4.3,
+      "expertise": ["Macroeconomics", "Behavioral Economics"],
+      "teaching_style": "Discussion-Based",
       "reviews": [
           {
               "rating": 4,
@@ -138,6 +152,8 @@
       "university": "UCLA",
       "department": "Psychology",
       "rating": 4.9,
+      "expertise": ["Cognitive Psychology", "Developmental Psychology"],
+      "teaching_style": "Interactive",
       "reviews": [
           {
               "rating": 5,
@@ -157,6 +173,8 @@
       "university": "University of Michigan",
       "department": "History",
       "rating": 4.1,
+      "expertise": ["Modern History", "Cultural History"],
+      "teaching_style": "Lecture-Based",
       "reviews": [
           {
               "rating": 4,
@@ -176,6 +194,8 @@
       "university": "Columbia University",
       "department": "English Literature",
       "rating": 4.7,
+      "expertise": ["Literary Theory", "19th Century Literature"],
+      "teaching_style": "Discussion-Based",
       "reviews": [
           {
               "rating": 5,
@@ -191,762 +211,422 @@
   },
   {
       "id": "11",
-      "name": "Dr. Laura Martinez",
-      "university": "University of Texas",
-      "department": "Sociology",
+      "name": "Prof. Hannah Adams",
+      "university": "Yale University",
+      "department": "Political Science",
       "rating": 4.6,
+      "expertise": ["International Relations", "Political Theory"],
+      "teaching_style": "Interactive",
       "reviews": [
           {
               "rating": 5,
-              "text": "Dr. Martinez provides deep insights into social issues.",
+              "text": "Prof. Adams is incredibly knowledgeable and makes complex topics engaging.",
               "date": "2024-01-12"
           },
           {
               "rating": 4,
-              "text": "Interesting class with challenging material.",
-              "date": "2023-12-18"
+              "text": "Great insights into global politics, though the workload is heavy.",
+              "date": "2023-12-02"
           }
       ]
   },
   {
       "id": "12",
-      "name": "Prof. Alan Lee",
+      "name": "Dr. Oliver Scott",
       "university": "University of Chicago",
-      "department": "Philosophy",
+      "department": "Sociology",
       "rating": 4.4,
+      "expertise": ["Social Theory", "Quantitative Research"],
+      "teaching_style": "Lecture-Based",
       "reviews": [
-          {
-              "rating": 5,
-              "text": "Prof. Lee encourages critical thinking and philosophical debate.",
-              "date": "2024-01-05"
-          },
           {
               "rating": 4,
-              "text": "A demanding course but worth it for the depth of learning.",
-              "date": "2023-11-22"
-          }
-      ]
-  },
-  {
-      "id": "13",
-      "name": "Dr. Megan Scott",
-      "university": "University of California, San Diego",
-      "department": "Environmental Science",
-      "rating": 4.7,
-      "reviews": [
-          {
-              "rating": 5,
-              "text": "Dr. Scott is passionate about environmental issues and it shows.",
+              "text": "Dr. Scott’s lectures are well-organized and thought-provoking.",
               "date": "2024-01-18"
           },
           {
               "rating": 4,
-              "text": "Great field trips and hands-on learning experiences.",
-              "date": "2023-12-12"
-          }
-      ]
-  },
-  {
-      "id": "14",
-      "name": "Prof. Daniel Green",
-      "university": "University of California, Irvine",
-      "department": "Political Science",
-      "rating": 4.3,
-      "reviews": [
-          {
-              "rating": 4,
-              "text": "Engaging lectures and thorough analysis of current events.",
-              "date": "2024-02-12"
-          },
-          {
-              "rating": 5,
-              "text": "Prof. Green's classes are highly insightful and interactive.",
-              "date": "2023-11-28"
-          }
-      ]
-  },
-  {
-      "id": "15",
-      "name": "Dr. Karen Wilson",
-      "university": "University of Wisconsin",
-      "department": "Engineering",
-      "rating": 4.5,
-      "reviews": [
-          {
-              "rating": 5,
-              "text": "Dr. Wilson's practical approach to engineering is highly beneficial.",
-              "date": "2024-01-08"
-          },
-          {
-              "rating": 4,
-              "text": "Challenging projects but excellent guidance throughout.",
+              "text": "Challenging coursework but very rewarding.",
               "date": "2023-12-07"
           }
       ]
   },
   {
-      "id": "16",
-      "name": "Prof. Julia Harris",
-      "university": "University of Pennsylvania",
-      "department": "History",
-      "rating": 4.2,
-      "reviews": [
-          {
-              "rating": 4,
-              "text": "Prof. Harris brings historical events to life with engaging lectures.",
-              "date": "2024-02-20"
-          },
-          {
-              "rating": 4,
-              "text": "Good balance between lecture and discussion.",
-              "date": "2023-11-18"
-          }
-      ]
-  },
-  {
-      "id": "17",
-      "name": "Dr. Nathan Brooks",
-      "university": "University of California, Los Angeles",
-      "department": "Statistics",
-      "rating": 4.8,
+      "id": "13",
+      "name": "Prof. Zoe Patel",
+      "university": "University of California, San Diego",
+      "department": "Environmental Science",
+      "rating": 4.7,
+      "expertise": ["Ecology", "Climate Change"],
+      "teaching_style": "Experiential",
       "reviews": [
           {
               "rating": 5,
-              "text": "Dr. Brooks is a master at explaining complex statistical concepts.",
-              "date": "2024-01-22"
+              "text": "Prof. Patel’s passion for environmental issues is inspiring.",
+              "date": "2024-01-29"
           },
           {
               "rating": 4,
-              "text": "Challenging assignments but very informative.",
+              "text": "Hands-on projects are very impactful but can be time-consuming.",
               "date": "2023-12-15"
           }
       ]
   },
   {
-      "id": "18",
-      "name": "Prof. Linda Clark",
-      "university": "University of Virginia",
-      "department": "Architecture",
-      "rating": 4.4,
+      "id": "14",
+      "name": "Dr. Lisa Nguyen",
+      "university": "University of Pennsylvania",
+      "department": "Philosophy",
+      "rating": 4.8,
+      "expertise": ["Ethics", "Political Philosophy"],
+      "teaching_style": "Discussion-Based",
       "reviews": [
           {
               "rating": 5,
-              "text": "Prof. Clark’s design studios are highly inspiring.",
-              "date": "2024-01-07"
+              "text": "Dr. Nguyen is an exceptional philosopher and teacher.",
+              "date": "2024-01-21"
           },
           {
               "rating": 4,
-              "text": "Very creative and challenging coursework.",
+              "text": "Class discussions are stimulating and thought-provoking.",
+              "date": "2023-12-11"
+          }
+      ]
+  },
+  {
+      "id": "15",
+      "name": "Prof. Tom Richards",
+      "university": "University of California, Berkeley",
+      "department": "Statistics",
+      "rating": 4.5,
+      "expertise": ["Statistical Inference", "Data Analysis"],
+      "teaching_style": "Hands-On",
+      "reviews": [
+          {
+              "rating": 4,
+              "text": "Prof. Richards makes complex statistical concepts approachable.",
+              "date": "2024-01-16"
+          },
+          {
+              "rating": 5,
+              "text": "Great practical application of statistical methods.",
+              "date": "2023-12-04"
+          }
+      ]
+  },
+  {
+      "id": "16",
+      "name": "Dr. Emily Martinez",
+      "university": "University of Texas at Austin",
+      "department": "Linguistics",
+      "rating": 4.3,
+      "expertise": ["Syntax", "Semantics"],
+      "teaching_style": "Interactive",
+      "reviews": [
+          {
+              "rating": 4,
+              "text": "Dr. Martinez's classes are engaging and informative.",
+              "date": "2024-01-14"
+          },
+          {
+              "rating": 4,
+              "text": "Interesting material but challenging assignments.",
+              "date": "2023-12-20"
+          }
+      ]
+  },
+  {
+      "id": "17",
+      "name": "Prof. Charles Davis",
+      "university": "Northwestern University",
+      "department": "Engineering",
+      "rating": 4.6,
+      "expertise": ["Robotics", "Mechanical Design"],
+      "teaching_style": "Hands-On",
+      "reviews": [
+          {
+              "rating": 5,
+              "text": "Prof. Davis provides excellent hands-on experience in engineering.",
+              "date": "2024-01-28"
+          },
+          {
+              "rating": 4,
+              "text": "Great projects but can be quite time-consuming.",
               "date": "2023-12-05"
           }
       ]
   },
   {
-      "id": "19",
-      "name": "Dr. Richard Evans",
-      "university": "University of Minnesota",
-      "department": "Astronomy",
-      "rating": 4.6,
+      "id": "18",
+      "name": "Dr. Fiona Kelly",
+      "university": "University of Edinburgh",
+      "department": "Art History",
+      "rating": 4.7,
+      "expertise": ["Renaissance Art", "Modern Art"],
+      "teaching_style": "Lecture-Based",
       "reviews": [
           {
               "rating": 5,
-              "text": "Dr. Evans makes astronomy exciting and accessible.",
-              "date": "2024-01-19"
+              "text": "Dr. Kelly’s lectures are incredibly insightful.",
+              "date": "2024-01-30"
           },
           {
               "rating": 4,
-              "text": "Great practical observations and hands-on learning.",
-              "date": "2023-12-03"
+              "text": "Challenging material but very rewarding.",
+              "date": "2023-12-15"
+          }
+      ]
+  },
+  {
+      "id": "19",
+      "name": "Prof. Daniel Lee",
+      "university": "University of Toronto",
+      "department": "Finance",
+      "rating": 4.4,
+      "expertise": ["Corporate Finance", "Investment Analysis"],
+      "teaching_style": "Case Study",
+      "reviews": [
+          {
+              "rating": 4,
+              "text": "Prof. Lee’s case studies are very practical and informative.",
+              "date": "2024-01-25"
+          },
+          {
+              "rating": 4,
+              "text": "Good lectures but the case studies can be intense.",
+              "date": "2023-12-12"
           }
       ]
   },
   {
       "id": "20",
-      "name": "Prof. Sophia Adams",
-      "university": "University of North Carolina",
-      "department": "Public Health",
-      "rating": 4.3,
+      "name": "Dr. Ava Thompson",
+      "university": "University of Melbourne",
+      "department": "Anthropology",
+      "rating": 4.6,
+      "expertise": ["Cultural Anthropology", "Archaeology"],
+      "teaching_style": "Experiential",
       "reviews": [
           {
-              "rating": 4,
-              "text": "Prof. Adams provides practical insights into public health issues.",
-              "date": "2024-02-02"
+              "rating": 5,
+              "text": "Dr. Thompson’s fieldwork-based approach is very engaging.",
+              "date": "2024-01-12"
           },
           {
-              "rating": 5,
-              "text": "Very knowledgeable and passionate about the subject.",
-              "date": "2023-11-12"
+              "rating": 4,
+              "text": "Insightful class but requires significant fieldwork.",
+              "date": "2023-12-22"
           }
       ]
   },
   {
       "id": "21",
-      "name": "Dr. Andrew Taylor",
-      "university": "University of Colorado Boulder",
-      "department": "Geology",
+      "name": "Prof. Mark Harris",
+      "university": "University of Sydney",
+      "department": "International Studies",
       "rating": 4.5,
+      "expertise": ["Global Politics", "Diplomacy"],
+      "teaching_style": "Discussion-Based",
       "reviews": [
           {
-              "rating": 5,
-              "text": "Dr. Taylor's fieldwork is a highlight of the course.",
-              "date": "2024-01-11"
+              "rating": 4,
+              "text": "Prof. Harris’s discussions are thought-provoking and insightful.",
+              "date": "2024-01-20"
           },
           {
-              "rating": 4,
-              "text": "Detailed and engaging lectures.",
-              "date": "2023-12-06"
+              "rating": 5,
+              "text": "Excellent course with a global perspective.",
+              "date": "2023-12-10"
           }
       ]
   },
   {
       "id": "22",
-      "name": "Prof. Olivia Wilson",
-      "university": "University of Florida",
-      "department": "Linguistics",
-      "rating": 4.8,
+      "name": "Dr. Laura Adams",
+      "university": "University of Arizona",
+      "department": "Astronomy",
+      "rating": 4.7,
+      "expertise": ["Stellar Astronomy", "Astrophysics"],
+      "teaching_style": "Lecture-Based",
       "reviews": [
           {
               "rating": 5,
-              "text": "Prof. Wilson’s understanding of languages is unparalleled.",
-              "date": "2024-01-21"
+              "text": "Dr. Adams makes complex astronomical concepts accessible.",
+              "date": "2024-01-18"
           },
           {
               "rating": 4,
-              "text": "Insightful discussions on linguistic theories.",
-              "date": "2023-12-09"
-          }
-      ]
-  },
-  {
-      "id": "23",
-      "name": "Dr. Daniel White",
-      "university": "University of Georgia",
-      "department": "Philosophy",
-      "rating": 4.4,
-      "reviews": [
-          {
-              "rating": 5,
-              "text": "Dr. White’s approach to ethics is deeply thought-provoking.",
-              "date": "2024-01-13"
-          },
-          {
-              "rating": 4,
-              "text": "Challenging but rewarding coursework.",
+              "text": "Very interesting lectures but challenging coursework.",
               "date": "2023-12-08"
           }
       ]
   },
   {
-      "id": "24",
-      "name": "Prof. Ella Martinez",
-      "university": "University of Notre Dame",
-      "department": "Religious Studies",
-      "rating": 4.7,
+      "id": "23",
+      "name": "Prof. Olivia Robinson",
+      "university": "University of Warwick",
+      "department": "Computer Engineering",
+      "rating": 4.4,
+      "expertise": ["Embedded Systems", "Network Design"],
+      "teaching_style": "Hands-On",
       "reviews": [
           {
-              "rating": 5,
-              "text": "Prof. Martinez is excellent at contextualizing religious texts.",
-              "date": "2024-01-16"
+              "rating": 4,
+              "text": "Prof. Robinson’s labs are practical and insightful.",
+              "date": "2024-01-23"
           },
           {
               "rating": 4,
-              "text": "Engaging lectures and insightful discussions.",
+              "text": "Challenging assignments but valuable learning experience.",
+              "date": "2023-12-09"
+          }
+      ]
+  },
+  {
+      "id": "24",
+      "name": "Dr. William Martinez",
+      "university": "University of California, Irvine",
+      "department": "Mathematics",
+      "rating": 4.5,
+      "expertise": ["Applied Mathematics", "Statistics"],
+      "teaching_style": "Interactive",
+      "reviews": [
+          {
+              "rating": 4,
+              "text": "Dr. Martinez’s interactive approach is very engaging.",
+              "date": "2024-01-17"
+          },
+          {
+              "rating": 5,
+              "text": "Excellent teacher with practical applications of math.",
               "date": "2023-12-14"
           }
       ]
   },
   {
       "id": "25",
-      "name": "Dr. Steven Robinson",
-      "university": "University of Arizona",
-      "department": "Astronomy",
-      "rating": 4.6,
+      "name": "Prof. Sophia Walker",
+      "university": "University of Southern California",
+      "department": "Communications",
+      "rating": 4.8,
+      "expertise": ["Media Studies", "Public Relations"],
+      "teaching_style": "Discussion-Based",
       "reviews": [
           {
               "rating": 5,
-              "text": "Dr. Robinson’s passion for the universe is evident.",
-              "date": "2024-01-25"
+              "text": "Prof. Walker’s classes are interactive and thought-provoking.",
+              "date": "2024-01-15"
           },
           {
               "rating": 4,
-              "text": "Great use of technology in lectures.",
-              "date": "2023-12-20"
+              "text": "Great insights into media but requires active participation.",
+              "date": "2023-12-06"
           }
       ]
   },
   {
       "id": "26",
-      "name": "Prof. Emma Wilson",
-      "university": "University of California, Santa Barbara",
-      "department": "Marine Biology",
-      "rating": 4.7,
-      "reviews": [
-          {
-              "rating": 5,
-              "text": "Prof. Wilson’s field trips are incredibly educational.",
-              "date": "2024-01-23"
-          },
-          {
-              "rating": 4,
-              "text": "In-depth knowledge and great student support.",
-              "date": "2023-12-16"
-          }
-      ]
-  },
-  {
-      "id": "27",
-      "name": "Dr. Benjamin Lewis",
-      "university": "University of Iowa",
-      "department": "Engineering",
-      "rating": 4.5,
-      "reviews": [
-          {
-              "rating": 5,
-              "text": "Dr. Lewis’s courses are highly practical and informative.",
-              "date": "2024-01-08"
-          },
-          {
-              "rating": 4,
-              "text": "Challenging projects but great learning experience.",
-              "date": "2023-12-04"
-          }
-      ]
-  },
-  {
-      "id": "28",
-      "name": "Prof. Amelia Brown",
-      "university": "University of Washington",
-      "department": "Art History",
+      "name": "Dr. Joshua Brown",
+      "university": "University of North Carolina at Chapel Hill",
+      "department": "Genetics",
       "rating": 4.6,
+      "expertise": ["Genomics", "Bioinformatics"],
+      "teaching_style": "Research-Based",
       "reviews": [
           {
               "rating": 5,
-              "text": "Prof. Brown’s analysis of art is always fascinating.",
-              "date": "2024-01-30"
+              "text": "Dr. Brown’s research-focused classes are very engaging.",
+              "date": "2024-01-11"
           },
           {
               "rating": 4,
-              "text": "Challenging coursework but very rewarding.",
-              "date": "2023-12-12"
-          }
-      ]
-  },
-  {
-      "id": "29",
-      "name": "Dr. Lucas Smith",
-      "university": "University of South Carolina",
-      "department": "Chemistry",
-      "rating": 4.3,
-      "reviews": [
-          {
-              "rating": 4,
-              "text": "Dr. Smith’s lab sessions are very hands-on.",
-              "date": "2024-01-19"
-          },
-          {
-              "rating": 4,
-              "text": "Detailed lectures but require a lot of study.",
-              "date": "2023-12-07"
-          }
-      ]
-  },
-  {
-      "id": "30",
-      "name": "Prof. Natalie Clark",
-      "university": "University of Miami",
-      "department": "Mathematics",
-      "rating": 4.5,
-      "reviews": [
-          {
-              "rating": 5,
-              "text": "Prof. Clark’s teaching is both clear and engaging.",
-              "date": "2024-01-14"
-          },
-          {
-              "rating": 4,
-              "text": "Challenging but effective course.",
-              "date": "2023-12-18"
-          }
-      ]
-  },
-  {
-      "id": "31",
-      "name": "Dr. Jonathan Adams",
-      "university": "University of Nebraska",
-      "department": "Biology",
-      "rating": 4.4,
-      "reviews": [
-          {
-              "rating": 5,
-              "text": "Dr. Adams’s classes are informative and practical.",
-              "date": "2024-01-10"
-          },
-          {
-              "rating": 4,
-              "text": "Good balance of theory and practical work.",
-              "date": "2023-12-05"
-          }
-      ]
-  },
-  {
-      "id": "32",
-      "name": "Prof. Clara Martinez",
-      "university": "University of Illinois",
-      "department": "Political Science",
-      "rating": 4.6,
-      "reviews": [
-          {
-              "rating": 5,
-              "text": "Prof. Martinez’s insights into political theories are exceptional.",
-              "date": "2024-01-18"
-          },
-          {
-              "rating": 4,
-              "text": "Engaging lectures with a lot of practical examples.",
-              "date": "2023-12-12"
-          }
-      ]
-  },
-  {
-      "id": "33",
-      "name": "Dr. David Kim",
-      "university": "University of Wisconsin-Madison",
-      "department": "Psychology",
-      "rating": 4.8,
-      "reviews": [
-          {
-              "rating": 5,
-              "text": "Dr. Kim is an outstanding professor who makes complex topics understandable.",
-              "date": "2024-01-23"
-          },
-          {
-              "rating": 4,
-              "text": "Insightful lectures and well-organized coursework.",
-              "date": "2023-12-14"
-          }
-      ]
-  },
-  {
-      "id": "34",
-      "name": "Prof. Olivia Young",
-      "university": "University of Oregon",
-      "department": "Environmental Science",
-      "rating": 4.7,
-      "reviews": [
-          {
-              "rating": 5,
-              "text": "Prof. Young’s fieldwork is both educational and inspiring.",
-              "date": "2024-01-12"
-          },
-          {
-              "rating": 4,
-              "text": "Great lectures and hands-on projects.",
-              "date": "2023-12-07"
-          }
-      ]
-  },
-  {
-      "id": "35",
-      "name": "Dr. Marcus White",
-      "university": "University of Texas at Austin",
-      "department": "Engineering",
-      "rating": 4.4,
-      "reviews": [
-          {
-              "rating": 4,
-              "text": "Dr. White’s engineering projects are very practical.",
-              "date": "2024-01-26"
-          },
-          {
-              "rating": 4,
-              "text": "Challenging but very rewarding.",
-              "date": "2023-12-10"
-          }
-      ]
-  },
-  {
-      "id": "36",
-      "name": "Prof. Elizabeth Turner",
-      "university": "University of Pennsylvania",
-      "department": "Law",
-      "rating": 4.6,
-      "reviews": [
-          {
-              "rating": 5,
-              "text": "Prof. Turner provides an in-depth analysis of legal principles.",
-              "date": "2024-01-22"
-          },
-          {
-              "rating": 4,
-              "text": "Detailed lectures and engaging discussions.",
+              "text": "Challenging coursework but valuable for understanding genetics.",
               "date": "2023-12-03"
           }
       ]
   },
   {
-      "id": "37",
-      "name": "Dr. Emily Wilson",
-      "university": "University of California, Irvine",
-      "department": "Economics",
-      "rating": 4.3,
-      "reviews": [
-          {
-              "rating": 4,
-              "text": "Dr. Wilson’s economic theories are well explained.",
-              "date": "2024-02-05"
-          },
-          {
-              "rating": 4,
-              "text": "Challenging coursework but highly rewarding.",
-              "date": "2023-11-20"
-          }
-      ]
-  },
-  {
-      "id": "38",
-      "name": "Prof. Aaron Johnson",
-      "university": "University of California, San Diego",
-      "department": "Computer Engineering",
-      "rating": 4.5,
-      "reviews": [
-          {
-              "rating": 5,
-              "text": "Prof. Johnson’s lectures are highly engaging and practical.",
-              "date": "2024-01-28"
-          },
-          {
-              "rating": 4,
-              "text": "Great practical assignments and clear explanations.",
-              "date": "2023-12-01"
-          }
-      ]
-  },
-  {
-      "id": "39",
-      "name": "Dr. Megan Adams",
-      "university": "University of Maryland",
-      "department": "Biochemistry",
+      "id": "27",
+      "name": "Prof. Grace White",
+      "university": "University of Queensland",
+      "department": "History",
       "rating": 4.7,
+      "expertise": ["Ancient History", "Modern History"],
+      "teaching_style": "Lecture-Based",
       "reviews": [
           {
               "rating": 5,
-              "text": "Dr. Adams’s research is fascinating and well-presented.",
-              "date": "2024-01-17"
+              "text": "Prof. White’s lectures are incredibly detailed and insightful.",
+              "date": "2024-01-29"
           },
           {
               "rating": 4,
-              "text": "Challenging material but very insightful.",
-              "date": "2023-12-11"
+              "text": "Engaging material but requires thorough reading.",
+              "date": "2023-12-16"
           }
       ]
   },
   {
-     "id": "40",
-     "name": "Prof. Laura Scott",
-     "university": "University of California, Davis",
-     "department": "Environmental Science",
-     "rating": 4.8,
-     "reviews": [
-         {
-             "rating": 5,
-             "text": "Prof. Scott’s environmental projects are incredibly impactful.",
-             "date": "2024-01-18"
-         },
-         {
-             "rating": 4,
-             "text": "Very knowledgeable and passionate about the subject.",
-             "date": "2023-12-08"
-         }
-     ]
- },
- {
-     "id": "41",
-     "name": "Dr. Oliver Bennett",
-     "university": "University of Illinois at Urbana-Champaign",
-     "department": "Anthropology",
-     "rating": 4.6,
-     "reviews": [
-         {
-             "rating": 5,
-             "text": "Dr. Bennett’s lectures are fascinating and well-organized.",
-             "date": "2024-01-30"
-         },
-         {
-             "rating": 4,
-             "text": "Insightful discussions and engaging content.",
-             "date": "2023-12-15"
-         }
-     ]
- },
- {
-     "id": "42",
-     "name": "Prof. Jessica Lee",
-     "university": "University of Washington",
-     "department": "Sociology",
-     "rating": 4.5,
-     "reviews": [
-         {
-             "rating": 5,
-             "text": "Prof. Lee’s approach to social issues is highly thought-provoking.",
-             "date": "2024-01-20"
-         },
-         {
-             "rating": 4,
-             "text": "Challenging coursework but rewarding.",
-             "date": "2023-12-10"
-         }
-     ]
- },
- {
-     "id": "43",
-     "name": "Dr. William Anderson",
-     "university": "University of Pittsburgh",
-     "department": "History",
-     "rating": 4.4,
-     "reviews": [
-         {
-             "rating": 5,
-             "text": "Dr. Anderson’s historical analysis is insightful and engaging.",
-             "date": "2024-01-15"
-         },
-         {
-             "rating": 4,
-             "text": "Good lectures and well-organized course material.",
-             "date": "2023-12-11"
-         }
-     ]
- },
- {
-     "id": "44",
-     "name": "Prof. Mia Brown",
-     "university": "University of Kansas",
-     "department": "Music",
-     "rating": 4.7,
-     "reviews": [
-         {
-             "rating": 5,
-             "text": "Prof. Brown’s music theory classes are exceptional.",
-             "date": "2024-01-09"
-         },
-         {
-             "rating": 4,
-             "text": "Engaging and detailed instruction.",
-             "date": "2023-12-02"
-         }
-     ]
- },
- {
-     "id": "45",
-     "name": "Dr. Julia Harris",
-     "university": "University of California, Santa Cruz",
-     "department": "Literature",
-     "rating": 4.5,
-     "reviews": [
-         {
-             "rating": 5,
-             "text": "Dr. Harris’s analysis of literature is very insightful.",
-             "date": "2024-01-12"
-         },
-         {
-             "rating": 4,
-             "text": "Challenging readings but very rewarding.",
-             "date": "2023-12-07"
-         }
-     ]
- },
- {
-     "id": "46",
-     "name": "Prof. Ethan Green",
-     "university": "University of Maryland",
-     "department": "Computer Science",
-     "rating": 4.6,
-     "reviews": [
-         {
-             "rating": 5,
-             "text": "Prof. Green’s courses are highly engaging and practical.",
-             "date": "2024-01-26"
-         },
-         {
-             "rating": 4,
-             "text": "Challenging but well-organized coursework.",
-             "date": "2023-12-12"
-         }
-     ]
- },
- {
-     "id": "47",
-     "name": "Dr. Victoria Lewis",
-     "university": "University of Texas at Austin",
-     "department": "Economics",
-     "rating": 4.4,
-     "reviews": [
-         {
-             "rating": 5,
-             "text": "Dr. Lewis’s insights into economic theories are exceptional.",
-             "date": "2024-01-19"
-         },
-         {
-             "rating": 4,
-             "text": "Well-organized lectures and assignments.",
-             "date": "2023-12-10"
-         }
-     ]
- },
- {
-     "id": "48",
-     "name": "Prof. Andrew White",
-     "university": "University of Washington",
-     "department": "Mathematics",
-     "rating": 4.7,
-     "reviews": [
-         {
-             "rating": 5,
-             "text": "Prof. White’s teaching method is excellent.",
-             "date": "2024-01-22"
-         },
-         {
-             "rating": 4,
-             "text": "Great lectures and support for students.",
-             "date": "2023-12-15"
-         }
-     ]
- },
- {
-     "id": "49",
-     "name": "Dr. Sarah Mitchell",
-     "university": "University of California, Berkeley",
-     "department": "Physics",
-     "rating": 4.8,
-     "reviews": [
-         {
-             "rating": 5,
-             "text": "Dr. Mitchell’s lectures are highly engaging and well-structured.",
-             "date": "2024-01-30"
-         },
-         {
-             "rating": 4,
-             "text": "Challenging but highly rewarding coursework.",
-             "date": "2023-12-20"
-         }
-     ]
- },
- {
-     "id": "50",
-     "name": "Prof. Caroline Gray",
-     "university": "University of Illinois",
-     "department": "Psychology",
-     "rating": 4.6,
-     "reviews": [
-         {
-             "rating": 5,
-             "text": "Prof. Gray’s research is highly influential.",
-             "date": "2024-01-21"
-         },
-         {
-             "rating": 4,
-             "text": "Interesting lectures with a lot of real-world applications.",
-             "date": "2023-12-18"
-         }
-     ]
- }
+      "id": "28",
+      "name": "Dr. Natalie Green",
+      "university": "University of Glasgow",
+      "department": "Psychology",
+      "rating": 4.4,
+      "expertise": ["Cognitive Psychology", "Behavioral Science"],
+      "teaching_style": "Interactive",
+      "reviews": [
+          {
+              "rating": 4,
+              "text": "Dr. Green’s interactive sessions are quite engaging.",
+              "date": "2024-01-19"
+          },
+          {
+              "rating": 4,
+              "text": "Good material but some assignments are intensive.",
+              "date": "2023-12-07"
+          }
+      ]
+  },
+  {
+      "id": "29",
+      "name": "Prof. Ian Scott",
+      "university": "University of Washington",
+      "department": "Physics",
+      "rating": 4.6,
+      "expertise": ["Quantum Mechanics", "Relativity"],
+      "teaching_style": "Lecture-Based",
+      "reviews": [
+          {
+              "rating": 5,
+              "text": "Prof. Scott’s lectures are very clear and insightful.",
+              "date": "2024-01-22"
+          },
+          {
+              "rating": 4,
+              "text": "Challenging material but well presented.",
+              "date": "2023-12-13"
+          }
+      ]
+  },
+  {
+      "id": "30",
+      "name": "Dr. Emily Davis",
+      "university": "University of Amsterdam",
+      "department": "Philosophy",
+      "rating": 4.5,
+      "expertise": ["Metaphysics", "Epistemology"],
+      "teaching_style": "Discussion-Based",
+      "reviews": [
+          {
+              "rating": 5,
+              "text": "Dr. Davis’s discussions are thought-provoking and deep.",
+              "date": "2024-01-24"
+          },
+          {
+              "rating": 4,
+              "text": "Insightful lectures but can be quite demanding.",
+              "date": "2023-12-02"
+          }
+      ]
+  }
 ]

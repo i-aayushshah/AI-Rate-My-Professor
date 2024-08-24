@@ -1,3 +1,4 @@
+// pages/search.js
 import { useState } from 'react';
 import { Search as SearchIcon } from 'lucide-react';
 import ProfessorCard from '../components/ProfessorCard';

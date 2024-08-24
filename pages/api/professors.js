@@ -13,11 +13,12 @@ export default async function handler(req, res) {
     try {
       const allProfessors = await pineconeManager.search('');
 
-      // Filtering based on name, university, and department
+      // Filtering based on name, university, department, and expertise
       const filteredResults = allProfessors.filter(professor =>
         professor.name.toLowerCase().includes(query.toLowerCase()) ||
         professor.university.toLowerCase().includes(query.toLowerCase()) ||
-        professor.department.toLowerCase().includes(query.toLowerCase())
+        professor.department.toLowerCase().includes(query.toLowerCase()) ||
+        (professor.expertise && professor.expertise.some(exp => exp.toLowerCase().includes(query.toLowerCase())))
       );
 
       res.status(200).json(filteredResults);
