@@ -8,7 +8,7 @@ const ProfessorCard = ({ professor }) => {
     <Card className="w-64 shadow-lg">
       <CardHeader className="text-lg font-bold">{professor.name}</CardHeader>
       <CardContent>
-        <p className="text-sm text-gray-600">{professor.university}</p>
+        <p className="text-sm text-gray-600">{professor.university} || {professor.department}</p>
         {professor.reviews && professor.reviews.length > 0 && (
           <div className="mt-2">
             <h3 className="text-md font-semibold">Reviews:</h3>

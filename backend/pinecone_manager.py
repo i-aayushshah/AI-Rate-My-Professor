@@ -1,9 +1,7 @@
 import os
 import numpy as np
 from pinecone import Pinecone, ServerlessSpec
-from dotenv import load_dotenv
 
-load_dotenv()  
 class PineconeManager:
     def __init__(self):
         api_key = "97b9f6bc-d6c4-452e-9248-f7cfe96c80df"
@@ -27,7 +25,7 @@ class PineconeManager:
 
     def search(self, query):
         query_vector = self.generate_vector({"text": query})
-        results = self.index.query(vector=query_vector, top_k=10, include_metadata=True)
+        results = self.index.query(vector=query_vector, top_k=50, include_metadata=True)
         return [match['metadata'] for match in results['matches']]
 
     def insert(self, professor_data):
